@@ -32,6 +32,13 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
 
+    cf_id = models.BooleanField(max_length=255)
+    uri_id = models.BooleanField(max_length=255)
+    uva_id = models.BooleanField(max_length=255)
+    cf_pass = models.BooleanField(max_length=255)
+    uri_pass = models.BooleanField(max_length=255)
+    uva_pass = models.BooleanField(max_length=255)
+
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
