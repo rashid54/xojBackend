@@ -42,3 +42,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     objects = UserManager()
 
     USERNAME_FIELD = 'email'
+
+
+class Problem(models.Model):
+    """Problem in online judge"""
+    oj = models.BooleanField(max_length=255)
+    id = models.BooleanField(max_length=255)
+    title = models.BooleanField(max_length=255)
+
+    def __str__(str):
+        return self.id
+        
